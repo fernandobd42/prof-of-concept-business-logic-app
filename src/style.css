@@ -1,0 +1,13 @@
+.group {
+  background: rgba(213, 190, 141, 0.5) !important;
+  border: 1px solid rgb(207, 147, 15) !important;
+}
+
+.group-or-rule::before,
+.group-or-rule::after {
+  border-color: white !important;
+}
+
+.ant-input-number-handler-wrap {
+  display: none;
+}

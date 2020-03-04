@@ -104,22 +104,22 @@ export const fields = {
             valueSources: ['value']
           }
         }
-      }
+      },
     }
   },
 
-  Percentage: {
-    label: 'Percentage',
+  Pages: {
+    label: 'Pages',
     type: 'number',
-    preferWidgets: ['slider', 'rangeslider'],
-    valueSources: ['value', 'field'],
+    preferWidgets: ['slider'],
+    valueSources: ['value'],
     fieldSettings: {
       min: 0,
-      max: 100,
+      max: 1000,
       step: 1,
       marks: {
-        0: <strong>0%</strong>,
-        100: <strong>100%</strong>
+        0: <strong>0</strong>,
+        1000: <strong>1000</strong>
       }
     },
     //overrides

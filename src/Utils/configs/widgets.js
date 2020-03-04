@@ -19,5 +19,9 @@ export const widgets = {
     customProps: {
       style: { minWidth: '150px' }
     }
+  },
+  date: {
+    ...BasicConfig.widgets.date,
+    jsonLogic: val => new Date(val).toISOString()
   }
 }

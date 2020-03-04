@@ -1,8 +1,10 @@
 import React, { memo } from 'react'
 import { Utils } from 'react-awesome-query-builder'
 
+import { Discount } from './Discount'
+
 const stringify = JSON.stringify
-const { jsonLogicFormat, queryString, getTree } = Utils
+const { jsonLogicFormat, getTree } = Utils
 
 const preStyle = {
   backgroundColor: 'darkgrey',
@@ -21,15 +23,8 @@ export const RenderResult = memo(({ tree: immutableTree, config }) => {
 
   return (
     <div style={{ padding: '40px' }}>
-      <div>
-        stringFormat:
-        <pre style={preStyle}>{stringify(queryString(immutableTree, config), undefined, 2)}</pre>
-      </div>
+      <Discount rules={logic} />
       <hr />
-      <div>
-        humanStringFormat:
-        <pre style={preStyle}>{stringify(queryString(immutableTree, config, true), undefined, 2)}</pre>
-      </div>
       <div>
         jsonLogicFormat: {errors.length > 0 && <pre style={preErrorStyle}>{stringify(errors, undefined, 2)}</pre>}
         {!!logic && (
